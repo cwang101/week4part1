@@ -25,7 +25,7 @@ public class LibraryTest {
         Library classUnderTest = new Library();
         assertTrue("AddStudent should return 'true'", classUnderTest.addStudent("张三,1,数学:75,语文:95,英语:80,编程:80"));
         assertThat(systemOut().endsWith("学生张三的成绩被添加\n")).isTrue();
-        assertFalse("AddStudent should return 'false'", classUnderTest.addStudent("张三,1语文:95,英语:80,编程:80"));
+        assertFalse("AddStudent should return 'false'", classUnderTest.addStudent("张三,,,,,语文:95,英语:80,编程:80"));
         assertThat(systemOut().endsWith("请按正确的格式输入（格式：姓名, 学号, 学科: 成绩, ...）：\n")).isTrue();
     }
     @Test
